@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="./javascript/script.js" defer></script>
+    <title>Pokémon</title>
+</head>
+<body>
+    <header>
+        <div class="tittle">
+            <h1>Escolha seu Pokémon!</h1>
+        </div>
+
+        <nav>
+            <ul class="nav_links">
+                <li><a href="#">Grama alta</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">contato</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <div id="container">
+            <div id="images">
+                <div onclick="squirtle()" class="container-images">
+                    <img src="https://img.pokemondb.net/sprites/ruby-sapphire/normal/squirtle.png" alt="Squirtle">
+                    <h2>Squirtle</h2>
+                </div>
+                <div onclick="charmander()" class="container-images">
+                    <img src="https://img.pokemondb.net/sprites/ruby-sapphire/normal/charmander.png" alt="Charmander">
+                    <h2>Charmander</h2>
+                </div>
+                <div onclick="bulbasaur()" class="container-images">
+                    <img src="https://img.pokemondb.net/sprites/ruby-sapphire/normal/bulbasaur.png" alt="Bulbasaur">
+                    <h2>Bulbasaur</h2>
+                </div>
+            </div>
+            <div class="infos-pokemon hidden">
+                <ul id="squirt" class="info-list hidden">
+                    <li>Número na Pokedex: °007</li>
+                    <li>Tipo: Água</li>
+                    <li>Fraquezas: Grama - Elétrico</li>
+                </ul>
+
+                <ul id="char" class="info-list hidden">
+                    <li>Número na Pokedex: °004</li>
+                    <li>Tipo: Fogo</li>
+                    <li>Fraquezas: Água - Terra - Pedra</li>
+                </ul>
+
+                <ul id="bulba" class="info-list hidden">
+                    <li>Número na Pokedex: °001</li>
+                    <li>Tipo: Planta - Veneno</li>
+                    <li>Fraquezas: Fogo - Psiquico - Voador</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
