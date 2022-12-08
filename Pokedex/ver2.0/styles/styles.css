@@ -1,0 +1,22 @@
+:root{
+    --main-color: black;
+    --secondary-color: yellow;
+    --terceary-color: red;
+}
+
+*{
+    /*Reset de Página*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*Elementos respeitarem seus espaços*/
+    font-family: helvetica, sans-serif;
+}
+
+body {
+    /*Adicionando um gif de fundo na página*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../data/images/cloud-background.gif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+}
+
