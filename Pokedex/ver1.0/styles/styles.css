@@ -4,7 +4,7 @@
 }
 
 body {
-    background: #FFFFFF url("../img/background.jpg") no-repeat right top fixed;
+    background: #FFFFFF url("../data/imgs/background.jpg") no-repeat right top fixed;
     box-sizing: border-box;
     font-family: sans-serif;
     max-width: 100%;

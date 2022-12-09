@@ -1,7 +1,6 @@
-:root{
-    --main-color: black;
-    --secondary-color: yellow;
-    --terceary-color: red;
+:root {
+    --secondary: #e0e01c;
+    --terceary: #10199c;
 }
 
 *{
@@ -14,9 +13,142 @@
 
 body {
     /*Adicionando um gif de fundo na página*/
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../data/images/cloud-background.gif);
+    background-image: url(../data/images/noon-background.png);
     background-position: center;
     background-size: cover;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
 }
 
+header{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px black;
+    background-color: transparent;
+    backdrop-filter: blur(6px);
+}
+
+/*Modificando no tema principal do site*/
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+}
+
+label{
+    font-size: 1.2em;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em;
+    cursor: pointer;
+}
+
+#pokedex-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+    /*background-color: black;*/
+    border: 3px solid #222;
+    border-radius: 5%;
+    padding: 2em;
+    background-color: rgba(2, 2, 2, 0.8);
+}
+
+/*Modificando o modal de informação da página*/
+
+#fade,
+#modal-info{
+    transition: 0.4s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+#fade{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+}
+
+#modal-info{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    color: black;
+    background-color: white;
+    padding: 0.8em;
+    border: 2px solid #e0e01c;
+    border-radius: 4%;
+}
+
+#modal-info-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #666;
+    padding-bottom: 0.6em;
+}
+
+#modal-info-body{
+    margin-top: 0.6em;
+    line-height: normal;
+}
+
+#fade.hide,
+#modal-info.hide,
+#modal-squirtle.hide,
+#modal-charmander.hide,
+#modal-bulbasaur.hide{
+    opacity: 0;
+    pointer-events: none;
+}
+
+/*Elemetnos em comum*/
+
+.btn {
+    padding: 0.3rem;
+    font-size: 1em;
+    border: 1px #222 transparent;
+    border-radius: 6px;
+    background-color: var(--terceary);
+    color: white;
+    cursor: pointer;
+}
+
+.img{
+    border: 2px solid var(--secondary);
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #10199c;
+    margin: 0.5em;
+}
+
+/*Pokemons Modal*/
+
+#modal-squirtle,
+#modal-charmander,
+#modal-bulbasaur{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    color: black;
+    background-color: white;
+    padding: 0.8em;
+    border: 2px solid #e0e01c;
+    border-radius: 4%;
+}

@@ -19,12 +19,54 @@
         atualizados, um CSS mais responsivo e conceitos melhores. Utilização
         de tags I (font-awesome e bootstrap icons) e sounds.
     -->
-
+    <div id="fade" class="hide"></div>
     <header>
         <h1>Pokemon!</h1>
+        <button id="modal-info-open" class="btn">Sobre <i class="bi bi-box-arrow-right"></i></button>
+        
     </header>
     <main>
-
+        <div id="modal-info" class="hide">
+            <div id="modal-info-header">
+                <h3>Sobre esta página</h3>
+                <button id="modal-info-close" class="btn">Fechar <i class="bi bi-box-arrow-in-left"></i></button>
+            </div>
+            <div id="modal-info-body"></div>
+            <h3>Versão 2.0</h3>
+            <p>
+                O que há de novo aqui? Tudo! um aprendizado completamente novo do que foi feito na versão anterior, com Modais e javascript atualizados, um CSS mais responsivo e conceitos melhores. Utilização de tags i (font-awesome e bootstrap icons) e sounds.
+            </p>
+        </div>
+        <div id="pokedex-container">
+            <div id="squirtle-container">
+                <label for="squirtle" id="squirtle">
+                    <img src="https://img.pokemondb.net/sprites/ruby-sapphire/normal/squirtle.png" alt="Squirtle" class="img" >
+                    <p>squirtle</p>
+                </label>
+                <div id="modal-squirtle" class="hide">
+                    <h2>modal do squirtle</h2>
+                    <button id="close-squirtle" class="btn">Fechar <i class="bi bi-box-arrow-in-left"></i></button>
+                </div>
+            </div><!--
+            <div id="charmander-container">
+                <label for="charmander" id="charmander">
+                    <img src="https://img.pokemondb.net/sprites/ruby-sapphire/normal/charmander.png" alt="Charmander" class="img">
+                    <p>charmander</p>
+                </label>
+                <div id="modal-charmander" class="hide">
+                    <button id="close-char" class="btn">Fechar <i class="bi bi-box-arrow-in-left"></i></button>
+                </div>
+            </div>
+            <div id="bulbasaur-container">
+                <label for="bulbasaur" id="bulbasaur">
+                    <img src="https://img.pokemondb.net/sprites/ruby-sapphire/normal/bulbasaur.png" alt="Bulbasaur" class="img">
+                    <p>bulbasaur</p>
+                </label>
+                <div id="modal-bulbasaur" class="hide">
+                    <button id="close-bulba" class="btn">Fechar <i class="bi bi-box-arrow-in-left"></i></button>
+                </div>
+            </div>-->
+        </div>
     </main>
 </body>
 </html>
