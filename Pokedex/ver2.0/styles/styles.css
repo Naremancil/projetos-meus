@@ -1,4 +1,5 @@
 :root {
+    --primary: #ac0606;
     --secondary: #e0e01c;
     --terceary: #10199c;
 }
@@ -65,7 +66,10 @@ label{
 /*Modificando o modal de informação da página*/
 
 #fade,
-#modal-info{
+#modal-info,
+#modal-squirtle,
+#modal-charmander,
+#modal-bulbasaur{
     transition: 0.4s;
     opacity: 1;
     pointer-events: all;
@@ -81,28 +85,33 @@ label{
     z-index: 5;
 }
 
-#modal-info{
+#modal-info,
+#modal-squirtle,
+#modal-charmander,
+#modal-bulbasaur{
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
-    color: black;
-    background-color: white;
+    color: white;
+    background-color: var(--terceary);
     padding: 0.8em;
-    border: 2px solid #e0e01c;
+    border: 2px solid var(--secondary);
     border-radius: 4%;
+    max-width: 80vw;
+    max-height: 80vh;
 }
-
-#modal-info-header{
+.modal-header{
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid #666;
     padding-bottom: 0.6em;
+    gap: 3em;
 }
 
-#modal-info-body{
+.modal-body{
     margin-top: 0.6em;
     line-height: normal;
 }
@@ -116,39 +125,64 @@ label{
     pointer-events: none;
 }
 
+/*Modificando o modal de Card dos Pokemons*/
+
+.card-field{
+    position: relative;
+    font-size: 0.8rem;
+    border: 2px solid var(--secondary);
+    border-radius: 1em;
+    padding: 0.4em;
+    margin: 0.2em;
+    background-color: #666;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+
+.type-weak{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.water-type{
+    background-color: cyan;
+    color: black;
+    font-weight: bolder;
+}
+
+.fire-type{
+    background-color: orangered;
+    color: black;
+    font-weight: bolder;
+}
+
+.grass-type{
+    background-color: greenyellow;
+    color: black;
+    font-weight: bolder;
+}
+
 /*Elemetnos em comum*/
 
-.btn {
+.btn{
     padding: 0.3rem;
     font-size: 1em;
     border: 1px #222 transparent;
     border-radius: 6px;
-    background-color: var(--terceary);
+    background-color: #666;
     color: white;
     cursor: pointer;
 }
 
 .img{
-    border: 2px solid var(--secondary);
+    border: 3px solid var(--secondary);
     border-radius: 50%;
     cursor: pointer;
     background-color: #10199c;
     margin: 0.5em;
-}
-
-/*Pokemons Modal*/
-
-#modal-squirtle,
-#modal-charmander,
-#modal-bulbasaur{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-    color: black;
-    background-color: white;
-    padding: 0.8em;
-    border: 2px solid #e0e01c;
-    border-radius: 4%;
+    max-width: 40vw;
+    max-height: 40vh;
 }

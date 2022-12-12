@@ -1,12 +1,22 @@
 // modal sobre a página
-const modalInfoOpen = document.querySelector("#modal-info-open")
-const modalInfoClose = document.querySelector("#modal-info-close")
-const fadeModal = document.querySelector("#fade")
+/* 
+houve uma atualização aqui no dia 12/12/2022 onde eu
+achei um modo de fazer o botão identificar o elemento pai e saber
+quem abrir e quem fechar
+*/
 
-var infoPag = [modalInfoOpen,modalInfoClose].forEach((element) => {
-    element.addEventListener("click", (ev) => {
-        document.querySelector("#modal-info").classList.toggle("hide")
-        document.querySelector("#fade").classList.toggle("hide")
+const btn = document.querySelectorAll('.btn')
+btn.forEach((el) => {
+    el.addEventListener('click', (e) => {
+        //console.log(e)
+        
+        if(e.target.innerText === "Sobre "){
+            document.querySelector('#modal-info').classList.toggle('hide')
+            document.querySelector('#fade').classList.toggle('hide')
+        } else {
+            e.target.offsetParent.classList.toggle('hide')
+            document.querySelector('#fade').classList.toggle('hide')
+        }
     })
 })
 
@@ -19,6 +29,10 @@ var infoPag = [modalInfoOpen,modalInfoClose].forEach((element) => {
     const testeAudio = new Audio('./data/charmander/004Charmander.mp3')
     testeAudio.play();
 */
+
+
+
+
 
 /*  ********** Decidi tentar fazer por Label
 
@@ -40,7 +54,18 @@ charmander.addEventListener("click", (element) =>{
 
 
 
+
+
+
+/* ********** Descobri uma forma diferente de abrir e fechar modais na qual não vou me incomodar em precisar ver quem é o modal que eu estou abrindo, usando uma forma genérica de pegar eles de acordo com o abrir e fechar, só preciso ver quem é o elemento pai e dar toggle('hide') nele.
+
+function closeModal(){
+    document.querySelector("")
+}
+
 function toggleSquirtle(){
+    document.querySelector("#modal-squirtle").classList.toggle('hide')
+    fadeModal.classList.toggle('hide')
 
 }
 
@@ -77,7 +102,7 @@ function whoIs(pokemonName){
         case 'bulbasaur':
             pokeSound = new Audio('../data/squirtle/squirtle.mp3').play()
             toggleBulba();
-            break;*/
+            break;
         default: console.log("ta dando ruim");
     }
 }
@@ -88,6 +113,60 @@ const pokemons = []
 pokemons[0] = document.querySelector("#squirtle")
 //pokemons[1] = document.querySelector("#charmander")
 //pokemons[2] = document.querySelector("#bulbasaur")
+
+// evento de click sobre o label
+pokemons.forEach((element) => {
+    element.addEventListener("click", (e) => {
+        let pokeName = e.path[1].innerText
+        //console.log(e.path[1].innerText)
+        whoIs(pokeName)
+    })
+})*/
+
+function squirtleModal(){
+    document.querySelector('#modal-squirtle').classList.toggle('hide')
+    document.querySelector('#fade').classList.toggle('hide')
+
+    // Reproduzir o som do pokemon!
+    pokeSound = new Audio('./data/squirtle/squirtle.mp3').play()
+}
+
+function charmanderModal(){
+    document.querySelector('#modal-charmander').classList.toggle('hide')
+    document.querySelector('#fade').classList.toggle('hide')
+
+    // Reproduzir o som do pokemon!
+    pokeSound = new Audio('./data/charmander/charmander.mp3').play()
+}
+
+function bulbasaureModal(){
+    document.querySelector('#modal-bulbasaur').classList.toggle('hide')
+    document.querySelector('#fade').classList.toggle('hide')
+
+    // Reproduzir o som do pokemon!
+    pokeSound = new Audio('./data/bulbasaur/bulbasaur.mp3').play()
+}
+
+function whoIs(name){
+    switch(name){
+        case 'squirtle':
+            squirtleModal()
+            break
+        case 'charmander':
+            charmanderModal()
+            break
+        case 'bulbasaur':
+            bulbasaureModal()
+            break
+        default: return
+    }
+}
+
+const pokemons = []
+
+pokemons[0] = document.querySelector("#squirtle")
+pokemons[1] = document.querySelector("#charmander")
+pokemons[2] = document.querySelector("#bulbasaur")
 
 // evento de click sobre o label
 pokemons.forEach((element) => {

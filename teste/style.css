@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal{
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid black;
+    background-color: aquamarine;
+}
+
+.hide {
+    display: none;
+}
+
+.btn {
+    height: 50vh;
+}

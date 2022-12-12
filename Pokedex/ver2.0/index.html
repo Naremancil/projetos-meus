@@ -27,45 +27,99 @@
     </header>
     <main>
         <div id="modal-info" class="hide">
-            <div id="modal-info-header">
+            <div class="modal-header"> <!--Header-->
                 <h3>Sobre esta página</h3>
                 <button id="modal-info-close" class="btn">Fechar <i class="bi bi-box-arrow-in-left"></i></button>
             </div>
-            <div id="modal-info-body"></div>
+            <div class="modal-body"></div> <!--Body-->
             <h3>Versão 2.0</h3>
             <p>
                 O que há de novo aqui? Tudo! um aprendizado completamente novo do que foi feito na versão anterior, com Modais e javascript atualizados, um CSS mais responsivo e conceitos melhores. Utilização de tags i (font-awesome e bootstrap icons) e sounds.
             </p>
         </div>
+
         <div id="pokedex-container">
-            <div id="squirtle-container">
+            <div id="squirtle-container"> <!--Container-->
+                <!--Menu do squirtle-->
                 <label for="squirtle" id="squirtle">
-                    <img src="https://img.pokemondb.net/sprites/ruby-sapphire/normal/squirtle.png" alt="Squirtle" class="img" >
+                    <img src="https://img.pokemondb.net/sprites/ruby-sapphire/normal/squirtle.png" alt="_Squirtle" class="img" >
                     <p>squirtle</p>
                 </label>
+
+                <!--Modal do squirtle-->
                 <div id="modal-squirtle" class="hide">
-                    <h2>modal do squirtle</h2>
-                    <button id="close-squirtle" class="btn">Fechar <i class="bi bi-box-arrow-in-left"></i></button>
-                </div>
-            </div><!--
-            <div id="charmander-container">
-                <label for="charmander" id="charmander">
-                    <img src="https://img.pokemondb.net/sprites/ruby-sapphire/normal/charmander.png" alt="Charmander" class="img">
-                    <p>charmander</p>
-                </label>
-                <div id="modal-charmander" class="hide">
-                    <button id="close-char" class="btn">Fechar <i class="bi bi-box-arrow-in-left"></i></button>
+                    <div class="modal-header"> <!--Header-->
+                        <h2>modal do squirtle</h2>
+                        <button id="close-squirtle" class="btn">Fechar <i class="bi bi-box-arrow-in-left"></i></button>
+                    </div>
+                    <div class="modal-body"> <!--Body-->
+                        <div class="card-body">
+                            <h2 class="card-field">Squirlte (ゼニガメ)</h2>
+                            <h2 class="card-field">Pokedex #007</h2>
+                            <img src="./data/squirtle/squirtle_tomando_skol.jpg" alt="_squirtle_tomando_skol" class="img">
+                            <div class="type-weak">
+                                <p class="card-field">Type</p>
+                                <p class="card-field water-type">Water</p>
+                                <p class="card-field">Weak</p>
+                                <p class="card-field grass-type">Grass</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div id="bulbasaur-container">
+            <div id="charmander-container"> <!--Container-->
+                <!--Menu do Charmander-->
+                <label for="charmander" id="charmander">
+                    <img src="https://img.pokemondb.net/sprites/ruby-sapphire/normal/charmander.png" alt="_Charmander" class="img">
+                    <p>charmander</p>
+                </label>
+
+                <!--Modal do Charmander-->
+                <div id="modal-charmander" class="hide">
+                    <div class="modal-header"> <!--Header-->
+                        <h2>modal do charmander</h2>
+                        <button id="close-char" class="btn">Fechar <i class="bi bi-box-arrow-in-left"></i></button>
+                        
+                    </div>
+                    <div class="modal-body"> <!--Body-->
+                        <h2 class="card-field">Charmander (ヒトカゲ)</h2>
+                        <h2 class="card-field">Pokedex #004</h2>
+                        <img src="./data/charmander/charmander_happy.gif" alt="_happy_charmander" class="img">
+                        <div class="type-weak">
+                            <p class="card-field">Type</p>
+                            <p class="card-field fire-type">Fire</p>
+                            <p class="card-field">Weak</p>
+                            <p class="card-field water-type">Water</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="bulbasaur-container"> <!--Container-->
+                <!--Menu do Bulbasauro-->
                 <label for="bulbasaur" id="bulbasaur">
-                    <img src="https://img.pokemondb.net/sprites/ruby-sapphire/normal/bulbasaur.png" alt="Bulbasaur" class="img">
+                    <img src="https://img.pokemondb.net/sprites/ruby-sapphire/normal/bulbasaur.png" alt="_Bulbasaur" class="img">
                     <p>bulbasaur</p>
                 </label>
+
+                <!--Modal do Bulbasauro-->
                 <div id="modal-bulbasaur" class="hide">
-                    <button id="close-bulba" class="btn">Fechar <i class="bi bi-box-arrow-in-left"></i></button>
+                    <div class="modal-header"> <!--Header-->
+                        <h2>modal do bulbasaur</h2>
+                        <button id="close-bulba" class="btn">Fechar <i class="bi bi-box-arrow-in-left"></i></button>
+                    </div>
+                    <div class="modal-body"> <!--Body-->
+                        <h2 class="card-field">Bulbasaur (フシギダネ)</h2>
+                        <h2 class="card-field">Pokedex #001</h2>
+                        <img src="./data/bulbasaur/bulbasaur_pepe.jpg" alt="_pepe_bulbasaur" class="img">
+                        <div class="type-weak">
+                            <p class="card-field">Type</p>
+                            <p class="card-field grass-type">Grass</p>
+                            <p class="card-field">Weak</p>
+                            <p class="card-field fire-type">Fire</p>
+                        </div>
+                    </div>
                 </div>
-            </div>-->
+            </div>
         </div>
     </main>
 </body>
