@@ -80,18 +80,35 @@ header{
     opacity: .9;
 }
 
+/*Essa seção faz o carrossel andar da esquerda pra direita e vice versa*/
 #first:checked ~ .first{
     margin-left: 0;
+}
+
+#first:checked ~ .manual-nav .first-btn{
+    opacity: 1;
 }
 
 #second:checked ~ .first{
     margin-left: -100%;
 }
 
+#second:checked ~ .manual-nav .second-btn{
+    opacity: 1;
+}
+
 #third:checked ~ .first{
     margin-left: -200%;
 }
 
+#third:checked ~ .manual-nav .third-btn{
+    opacity: 1;
+}
+
 #forth:checked ~ .first{
     margin-left: -300%;
+}
+
+#forth:checked ~ .manual-nav .forth-btn{
+    opacity: 1;
 }
